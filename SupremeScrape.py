@@ -15,7 +15,6 @@ while category.lower() != "jackets" and category.lower() != "shirts" and categor
     category = getInput()
 
 
-
 url = "https://www.supremenewyork.com/shop.json"
 
 r = requests.request("get", url=url)
@@ -32,5 +31,3 @@ while i < len(jsonText['products_and_categories'][category]):
     link = (" https://www.supremenewyork.com/shop/"+category+"/"+str(jsonText['products_and_categories'][category][i]['id']))
     print(item + link)
     i+=1
-
-# https://www.supremenewyork.com/shop/category/id
